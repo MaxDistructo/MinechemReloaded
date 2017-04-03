@@ -1,4 +1,4 @@
-package maxdistructo.minechemreloaded.chemicals
+package minechemreborn.chemicals
 
 public class ChemicalPotions{
 }
