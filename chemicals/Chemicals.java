@@ -8,7 +8,7 @@ import net.minecraftforge.fml.common.registry.GameRegistry;
 
 public class Chemicals {
     public static ItemOre chemicals;
-    public static String chemicalsString[] = {"h","he","li","be","b","c","n","o","f","ne","na","mg","al","si","p","s","cl","ar"};
+    public static String chemicalsString[] = {"h","he","li","be","b","c","n","o","f","ne","na","mg","al","si","p","s","cl","ar","k","ca","sc","ti","v","cr","mn","fe","co","ni","cu","zn","ga","ge","as","se","br","kr","rb","sr","y","zr","nb","mo","tc","ru","rh","pd","ag","cd","in","sn","sb","te","i","xe"};
     private static int i;
     public static void init(){
         while(i = 1, i++, i <= 118){
