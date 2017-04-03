@@ -8,11 +8,30 @@ import net.minecraftforge.fml.common.registry.GameRegistry;
 
 public class Chemicals {
     public static ItemOre chemicals;
-    public static String chemicalsString[] = {"h","he","li","be","b","c","n","o","f","ne","na","mg"};
+    public static String chemicalsString[] = {"h","he","li","be","b","c","n","o","f","ne","na","mg","al","si","p","s","cl","ar"};
     private static int i;
     public static void init(){
         while(i = 1, i++, i <= 118){
             if(chemicalsString[i] != null){
+                if(chemicalsString[i].equals("c")){
+                    chemicals = register(new ItemOre("carbon","coal"));
+                }
+                else if(chemicalsString[i].equals("al")){
+                    chemicals = register(new ItemOre("aluminum","nuggetAluminum"));
+                }
+                else if(chemicalsString[i].equals("fe")){
+                    chemicals = register(new ItemOre("iron","nuggetIron"));
+                }
+                else if (chemicalsString[i].equals("si")){
+                    chemicals = register(new ItemOre("silicon","silicon"));
+                }
+                else if(chemicalsString[i].equals("co"){
+                    chemicals = register(new ItemOre("cobalt","nuggetCobalt"));
+                }
+                else if(chemicalsString[i].equals("mg")){
+                    chemicals = register(new Itemore("magnesium","nuggetMagnesium"));
+                }
+                
             chemicals = register(new ItemOre("chemical" + chemicalsString[i], "chemical" + chemicalsString[i]));
         }
         else{
