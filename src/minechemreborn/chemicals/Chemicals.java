@@ -1,21 +1,19 @@
 package minechemreborn.chemicals;
 
-import net.minecraft.item.Item;
-import net.minecraftforge.fml.common.registry.GameRegistry;
 import net.shadowfacts.shadowmc.item.ItemOreDict;
 import net.shadowfacts.shadowmc.item.ModItems;
 
-public class Chemicals {
+public class Chemicals extends ModItems{
     static ItemOreDict chemicals;
     public static String chemicalsString[] = {"h","he","li","be","b","c","n","o","f","ne","na","mg","al","si","p","s","cl","ar","k","ca","sc","ti","v","cr","mn","fe","co","ni","cu","zn","ga","ge","as","se","br","kr","rb","sr","y","zr","nb","mo","tc","ru","rh","pd","ag","cd","in","sn","sb","te","i","xe","cs","ba","hf","ta","w","re","os","ir","pt","au","hg","ti","pb","bi","po","at","rn","fr","ra","la","ce","pr","nd","pm","sm","eu","gd","tb","dy","ho","er","tm","yb","lu","ac","th","pa","u","np","pu","am","cm","bk","cf","es","fm","md","no","lr"};
     private static int i;
-    public static void init() {
+    public void init() {
          i = 1;
         do {
            
             if (chemicalsString[i] != null) {
                 if (chemicalsString[i].equals("c")) {
-                    chemicals = register((ItemOreDict)new ItemOreDict ("carbon"));
+                    chemicals = register((ItemOreDict)new ItemOreDict ("carbon", "nuggetCoal"));
                 } else if (chemicalsString[i].equals("al")) {
                     chemicals = register((ItemOreDict)new ItemOreDict("aluminum", "nuggetAluminum"));
                 } else if (chemicalsString[i].equals("fe")) {
