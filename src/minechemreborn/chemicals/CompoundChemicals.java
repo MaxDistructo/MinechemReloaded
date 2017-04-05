@@ -10,12 +10,27 @@ public class CompoundChemicals extends ModItems{
     private static int i;
 public void init(){
     i = 1;
-    do{
+    do{ //Register Compouned Chemicals. AKA Carbon 2-10 are created here. Will eventually be converted to a metadata setup.
         if(Chemicals.chemicalsString[i] != null){
             compound = register((ItemOreDict)new ItemOreDict (Chemicals.chemicalsString[i] + "2"));
+            compound = register((ItemOreDict)new ItemOreDict (Chemicals.chemicalsString[i] + "3"));
+            compound = register((ItemOreDict)new ItemOreDict (Chemicals.chemicalsString[i] + "4"));
+            compound = register((ItemOreDict)new ItemOreDict (Chemicals.chemicalsString[i] + "5"));
+            compound = register((ItemOreDict)new ItemOreDict (Chemicals.chemicalsString[i] + "6"));
+            compound = register((ItemOreDict)new ItemOreDict (Chemicals.chemicalsString[i] + "7"));
+            compound = register((ItemOreDict)new ItemOreDict (Chemicals.chemicalsString[i] + "8"));
+            compound = register((ItemOreDict)new ItemOreDict (Chemicals.chemicalsString[i] + "9"));
+            compound = register((ItemOreDict)new ItemOreDict (Chemicals.chemicalsString[i] + "10"));
         }
         else{
             i = 100;
+            System.out.println("Finished Creating Stacked Chemicals");
+        }
+        if(compounds[i] != null){
+            compound = register((ItemOreDict)new ItemOreDict (compounds[i]));
+        }
+        else{
+            System.out.println("[minechemreborn] Finished Creating Chemical Compounds");
         }
         
     }
