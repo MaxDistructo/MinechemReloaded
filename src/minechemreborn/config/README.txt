@@ -1,0 +1,2 @@
+enableAllChemicals will enable all chemicals even if you cant do anything with them
+enableVanillaCrafting will eventually be used to toggle between the original method (created now) and the old method as done in the original.
