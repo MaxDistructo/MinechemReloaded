@@ -1,25 +1,26 @@
 package minechemreborn;
 
-import maxdistructo.core.create.ItemBase;
-import maxdistructo.core.oredict.ItemOreDict;
 import net.minecraft.item.Item;
 import net.minecraftforge.fml.common.registry.GameRegistry;
-import minechemreborn.chemicals.Chemicals;
+import minechemreborn.item.ItemChemical;
+import minechemreborn.registry.Render;
+import minechemreborn.item.EnumHandler;
 
 public class ModItems {
+    public static Item chemicals;
     public static void init(){
-        Chemicals.init();
+        chemicals = new ItemChemical("chemical");
+        
     }
-    private static <T extends Item> T register(T item) {
-        GameRegistry.register(item);
-
-        if (item instanceof ItemBase) {
-            ((ItemBase)item).registerItemModel();
-        }
-        if (item instanceof ItemOreDict) {
-            ((ItemOreDict)item).initOreDict();
-        }
-
-        return item;
+    public static void register(){
+        GameRegistry.register(chemicals);
     }
+    public static void render(){
+        for(int i = 0; i < EnumHandler.Chemicals.values().length; i++) {
+			Render.registerRender(chemicals, i, "chemical_" + EnumHandler.Chemicals.values()[i].getName());
+		}
+    }
+    
+    
+   
 }
