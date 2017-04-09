@@ -15,5 +15,8 @@ public class CommonProxy {
     ModItems.init();
     ModItems.register();
     ModItems.render();
+    ModItems.oredict();
+    ModItems.crafting();
+
     }
 }
