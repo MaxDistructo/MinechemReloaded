@@ -25,6 +25,7 @@ public class Main {
 
     @Mod.EventHandler
     public void preInit(FMLPreInitializationEvent event) {
+
         System.out.println(name + " is loading!");
     }
 
