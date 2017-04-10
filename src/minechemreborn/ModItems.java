@@ -50,6 +50,12 @@ public class ModItems { //Effects of Minechem Chemicals http://minechem2.wikia.c
         k_cyanite = new ModFood("KCN",0,0.0f,false,new PotionEffect(MobEffects.WITHER,40,3));
         psilocybin = new ModFood("C12H17N2O4P",0,0.0f,false, new PotionEffect(MobEffects.NIGHTVISION,20,0), new PotionEffect(MobEffects.NAUSEA,10,4));
         ethyl_alcohol = new ModFood("C2H6O",0,0.0f,false,new PotionEffect(MobEffects.NAUSEA,30,0));
+	aphetamine = new ModFood("C9H13N",0,0.0f,false,new PotionEffect(MobEffects.NAUSEA,40,4), new PotionEffect(MobEffects.SPEED,60,6));
+	theobromine = new ModFood("C7H8N4O2",0,0.0f,false,new PotionEffect(MobEffects.SPEED,300,1));
+	alinie = new ModFood("C3H7NO2",1,0.0f,false,new PotionEffect(MobEffects.HASTE,20,1), new PotionEffect(MobEffects.JUMPBOOST,20,1));
+	aspartic = new ModFood("C4H7NO4",1,0.0f,false,new PotionEffect(MobEffects.HASTE,20,1), new PotionEffect(MobEffects.JUMPBOOST,20,1));
+	glycine = new ModFood("C2H5NO2",1,0.0f,false,new PotionEffect(MobEffects.HASTE,20,1), new PotionEffect(MobEffects.JUMPBOOST,20,1));
+	serine = new ModFood("C3H7NO3",1,0.0f,false,new PotionEffect(MobEffects.HASTE,20,1), new PotionEffect(MobEffects.JUMPBOOST,20,1));
     }
     public static void register(){
         GameRegistry.register(chemicals);
