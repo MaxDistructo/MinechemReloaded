@@ -7,11 +7,13 @@ import net.minecraft.item.ItemStack;
 import java.util.List;
 
 public class ItemChemical extends Item{
-    
+    private String name;
     public ItemChemical(String name){
-        this.setUnlocalizedName(name);
+        this.name = name;
         this.setRegistryName(name);
         this.setHasSubtypes(true);
+        this.setUnlocalizedName(name);
+
     }
     @Override
     public void getSubItems(Item item, CreativeTabs tab, List<ItemStack> subItems){

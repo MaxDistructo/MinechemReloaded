@@ -1,5 +1,6 @@
 package minechemreborn;
 
+import net.minecraft.init.MobEffects;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.potion.PotionEffect;
@@ -43,7 +44,7 @@ public class ModItems { //Effects of Minechem Chemicals http://minechem2.wikia.c
 
     public static void init(){
         chemicals = new ItemChemical("chemical");
-        cocaine = new ModFood("C17H21NO4", 0, 0.1f, false, new PotionEffect(Potion.getPotionById(1), 60, 4), new PotionEffect(Potion.getPotionById(9), 60, 1));
+        cocaine = new ModFood("C17H21NO4", 0, 0.1f, false, new PotionEffect(MobEffects.SPEED, 60, 4), new PotionEffect(MobEffects.NAUSEA, 60, 1));
         meth = new ModFood("C10H15N", 0, 0.1f, false, new PotionEffect(Potion.getPotionById(7), 1, 1), new PotionEffect(Potion.getPotionById(9),40,4), new PotionEffect(Potion.getPotionById(1),60,6));
         water =  new ModFood("H2O", 1, 0.1f, false);
         k_cyanite = new ModFood("KCN",0,0.0f,false,new PotionEffect(Potion.getPotionById(20),40,3));

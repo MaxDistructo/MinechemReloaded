@@ -19,7 +19,7 @@ public class Main {
     @Mod.Instance(MODID)
     public static Main instance;
 
-    @SidedProxy(serverSide = "maxdistructo.mdir.proxy.CommonProxy", clientSide = "maxdistructo.mdir.proxy.ClientProxy")
+    @SidedProxy(serverSide = "minechemreborn.proxy.CommonProxy", clientSide = "minechemreborn.proxy.ClientProxy")
     public static CommonProxy proxy;
 
 
@@ -27,6 +27,7 @@ public class Main {
     public void preInit(FMLPreInitializationEvent event) {
 
         System.out.println(name + " is loading!");
+
     }
 
     @Mod.EventHandler
@@ -36,7 +37,7 @@ public class Main {
 
     @Mod.EventHandler
     public void postInit(FMLPostInitializationEvent event) {
-
+        proxy.postInit(event);
     }
 
 }
