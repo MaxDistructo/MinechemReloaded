@@ -45,11 +45,11 @@ public class ModItems { //Effects of Minechem Chemicals http://minechem2.wikia.c
     public static void init(){
         chemicals = new ItemChemical("chemical");
         cocaine = new ModFood("C17H21NO4", 0, 0.1f, false, new PotionEffect(MobEffects.SPEED, 60, 4), new PotionEffect(MobEffects.NAUSEA, 60, 1));
-        meth = new ModFood("C10H15N", 0, 0.1f, false, new PotionEffect(Potion.getPotionById(7), 1, 1), new PotionEffect(Potion.getPotionById(9),40,4), new PotionEffect(Potion.getPotionById(1),60,6));
+        meth = new ModFood("C10H15N", 0, 0.1f, false, new PotionEffect(MobEffects.INSTANTDAMAGE, 1, 1), new PotionEffect(MobEffects.NAUSEA,40,4), new PotionEffect(MobEffects.SPEED,60,6));
         water =  new ModFood("H2O", 1, 0.1f, false);
-        k_cyanite = new ModFood("KCN",0,0.0f,false,new PotionEffect(Potion.getPotionById(20),40,3));
-        psilocybin = new ModFood("C12H17N2O4P",0,0.0f,false, new PotionEffect(Potion.getPotionById(16),20,0), new PotionEffect(Potion.getPotionById(9),10,4));
-        ethyl_alcohol = new ModFood("C2H6O",0,0.0f,false,new PotionEffect(Potion.getPotionById(9),30,0));
+        k_cyanite = new ModFood("KCN",0,0.0f,false,new PotionEffect(MobEffects.WITHER,40,3));
+        psilocybin = new ModFood("C12H17N2O4P",0,0.0f,false, new PotionEffect(MobEffects.NIGHTVISION,20,0), new PotionEffect(MobEffects.NAUSEA,10,4));
+        ethyl_alcohol = new ModFood("C2H6O",0,0.0f,false,new PotionEffect(MobEffects.NAUSEA,30,0));
     }
     public static void register(){
         GameRegistry.register(chemicals);
@@ -72,7 +72,7 @@ public class ModItems { //Effects of Minechem Chemicals http://minechem2.wikia.c
 		Render.registerRender(ethyl_alcohol,0,"C2H6O");    }
 
     public static void crafting(){
-        GameRegistry.addRecipe(new ShapelessOreRecipe(water,"hho","   ", "   ",'h',"hydrogen",'o',"oxygen"));
+        GameRegistry.addRecipe(new ShapelessOreRecipe(new ItemStack(water), new ItemStack(chemicals, 2, 1), new ItemStack(chemicals,1,8)));
     }
     public static void smelting(){
     }
